@@ -35,3 +35,5 @@ Este repositorio incluye un *workflow* que te permite ejecutar el conector direc
 2. El workflow `Run Descartes Connector` se puede lanzar manualmente desde la pestaña **Actions** o dejar programado para que se ejecute cada hora.
 
 Cuando se ejecute, GitHub Actions instalará las dependencias y ejecutará `descartes_teams_connector.py` enviando el resumen a Teams.
+
+Si necesitas modificar la frecuencia de ejecución, ajusta la expresión `cron` en `.github/workflows/run-connector.yml`.
