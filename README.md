@@ -27,3 +27,11 @@ Este repositorio contiene un ejemplo sencillo (MCP) para conectar el sistema **D
    ```
 
 El script recupera información simulada de Descartes, genera un resumen con ChatGPT y lo publica en el canal de Teams configurado.
+
+## Uso con GitHub Actions
+Este repositorio incluye un *workflow* que te permite ejecutar el conector directamente desde GitHub. Para activarlo:
+
+1. Define los secretos `OPENAI_API_KEY` y `TEAMS_WEBHOOK_URL` en la configuración de tu repositorio.
+2. El workflow `Run Descartes Connector` se puede lanzar manualmente desde la pestaña **Actions** o dejar programado para que se ejecute cada hora.
+
+Cuando se ejecute, GitHub Actions instalará las dependencias y ejecutará `descartes_teams_connector.py` enviando el resumen a Teams.
